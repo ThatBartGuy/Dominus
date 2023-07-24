@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+ <Operation Class="PatchOperationAdd">
+          <xpath>Defs/ThinkTreeDef[defName = "HumanlikeConstant"]/thinkRoot/subNodes</xpath>
+          <value>
+
+             <li Class="ThinkNode_ConditionalPlayerControlledColonist">
+          <invert>false</invert>
+          <subNodes>
+
+            <li Class="ThinkNode_ConditionalHasAbility">
+              <ability>Suppress</ability>
+              <subNodes>
+
+                <li Class="Dominus.ThinkNode_ColonistCheckSlaveRebellion">
+                    <subNodes>
+					
+                      <li Class="ThinkNodeConditional_HashIntervalTick">
+                        <interval>50</interval>
+                        <subNodes>
+						
+                          <li Class="JobGiver_AICastAbilityOnSelf">
+                            <ability>Suppress</ability>
+                          </li>
+						  
+                        </subNodes>
+                    </li>
+                  </subNodes>
+                </li>
+
+              </subNodes>
+            </li>
+
+          </subNodes>
+        </li>
+
+          </value>
+  </Operation>
+
+</Patch>
