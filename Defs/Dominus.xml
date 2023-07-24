@@ -1,168 +1,179 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-  <AbilityDef ParentName="PsycastBase">
-    <defName>Enslave</defName>
-    <label>enslave</label>
-    <description>Enslave.</description>
-    <level>0</level>
-    <iconPath>UI/Abilities/Painblock</iconPath>
-    <hotKey>Misc1</hotKey>
-    <hostile>false</hostile>
-    <statBases>
-      <Ability_Duration>120</Ability_Duration>
-    </statBases>
-    <verbProperties>
-      <warmupTime>0.25</warmupTime>
-      <range>24.9</range>
-      <targetParams>
-        <onlyTargetIncapacitatedPawns>True</onlyTargetIncapacitatedPawns>
-		<onlyTargetColonistsOrPrisoners>True</onlyTargetColonistsOrPrisoners>
-		<canTargetPawns>True</canTargetPawns>
-      </targetParams>
-    </verbProperties>
-    <comps>
-      <li Class = "CompProperties_AbilityGiveHediff">
-        <compClass>CompAbilityEffect_GiveHediff</compClass>
-        <hediffDef>Dominated</hediffDef>
-        <applicableToMechs>False</applicableToMechs>
-      </li>
-      <li Class="CompProperties_AbilityFleckOnTarget">
-        <fleckDef>PsycastPsychicEffect</fleckDef>
-      </li>
-	  <li Class="Dominus.CompProperties_AbilityEnslave"></li>
-    </comps>
-  </AbilityDef>
-  
-  <AbilityDef ParentName="PsycastBase">
-    <defName>Suppress</defName>
-    <label>suppress</label>
-    <description>Suppress.</description>
-    <level>0</level>
-    <iconPath>UI/Abilities/Painblock</iconPath>
-    <hotKey>Misc1</hotKey>
-    <hostile>false</hostile>
-    <statBases>
-      <Ability_Duration>120</Ability_Duration>
-    </statBases>
-    <verbProperties>
-      <warmupTime>0.25</warmupTime>
-      <range>1</range>
-      <targetParams>
-		<canTargetSelf>True</canTargetSelf>
-      </targetParams>
-    </verbProperties>
-    <comps>
-      <li Class="CompProperties_AbilityFleckOnTarget">
-        <fleckDef>PsycastPsychicEffect</fleckDef>
-      </li>
-	  <li Class="Dominus.CompProperties_AbilitySuppress">
-		<SuppressionAmount>0.3</SuppressionAmount>
-		<hediffDef>Dominated</hediffDef>
-	  </li>
-    </comps>
-  </AbilityDef>
-  
-  <AbilityDef ParentName="PsycastBase">
-    <defName>Improve</defName>
-    <label>improve</label>
-    <description>Improve.</description>
-    <level>0</level>
-    <iconPath>UI/Abilities/Painblock</iconPath>
-    <hotKey>Misc1</hotKey>
-    <hostile>false</hostile>
-    <statBases>
-      <Ability_Duration>120</Ability_Duration>
-    </statBases>
-    <verbProperties>
-      <warmupTime>0.25</warmupTime>
-      <range>1</range>
-      <targetParams>
-		<canTargetSelf>True</canTargetSelf>
-      </targetParams>
-    </verbProperties>
-    <comps>
-      <li Class="CompProperties_AbilityFleckOnTarget">
-        <fleckDef>PsycastPsychicEffect</fleckDef>
-      </li>
-	  <li Class="Dominus.CompProperties_AbilityImprove"></li>
-    </comps>
-  </AbilityDef>
-  
-  <HediffDef>
-    <defName>Dominus</defName>
-    <label>dominus</label>
-    <description>Dominus.</description>
-    <isBad>false</isBad>
-  </HediffDef>
-  
-  <HediffDef>
-    <defName>Dominated</defName>
-    <label>dominated</label>
-    <description>Dominated by a Dominus.</description>
-    <isBad>false</isBad>
-  </HediffDef>
-  
-  <HediffDef MayRequireAnyOf="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Biotech">
-    <defName>DominatedLevel</defName>
-    <label>dominated level</label>
-    <description>An organic connection to a larger psychic field. This allows a person to psychically induce a distant archotech superintelligence to influence reality in ways that seem impossible.\n\nHigher levels of psylink permit the use of more powers. Regardless of psylink level, a person can only use specific powers that they have learned.\n\nPsylink comes from a variety of sources. Single-use psylink neuroformer devices can create a psylink. Tribal peoples also know how to develop it through ritual linking with the legendary anima tree.\n\nAs a physical phenomenon in the brain, psylink is poorly-understood by scientists, not least because it seems to actively conceal itself if studied too closely. One thing most agree on is that it somehow connects people to archotechs and harnesses their power, possibly through some sort of negotiation or sympathy mechanism.</description>
-    <descriptionShort>Allows a person to psychically-induce an archotech to influence reality in ways that seem impossible. Higher levels of psylink permit the use of more powers.</descriptionShort>
-    <defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
-    <isBad>false</isBad>
-    <minSeverity>0</minSeverity>
-    <maxSeverity>6</maxSeverity>
-    <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
-    <stages>
-      <li>
-        <minSeverity>1</minSeverity>
-		<label>Level 1</label>
-        <statFactors>
-          <PsychicEntropyMax>1.0</PsychicEntropyMax>
-          <PsychicEntropyRecoveryRate>1</PsychicEntropyRecoveryRate>
-        </statFactors>
-      </li>
-      <li>
-        <minSeverity>2</minSeverity>
-		<label>Level 2</label>
-        <statFactors>
-          <PsychicEntropyMax>1.3334</PsychicEntropyMax>
-          <PsychicEntropyRecoveryRate>1.125</PsychicEntropyRecoveryRate>
-        </statFactors>
-      </li>
-      <li>
-        <minSeverity>3</minSeverity>
-		<label>Level 3</label>
-        <statFactors>
-          <PsychicEntropyMax>1.6667</PsychicEntropyMax>
-          <PsychicEntropyRecoveryRate>1.25</PsychicEntropyRecoveryRate>
-        </statFactors>
-      </li>
-      <li>
-        <minSeverity>4</minSeverity>
-		<label>Level 4</label>
-        <statFactors>
-          <PsychicEntropyMax>2.0</PsychicEntropyMax>
-          <PsychicEntropyRecoveryRate>1.375</PsychicEntropyRecoveryRate>
-        </statFactors>
-      </li>
-      <li>
-        <minSeverity>5</minSeverity>
-		<label>Level 5</label>
-        <statFactors>
-          <PsychicEntropyMax>2.3334</PsychicEntropyMax>
-          <PsychicEntropyRecoveryRate>1.5</PsychicEntropyRecoveryRate>
-        </statFactors>
-      </li>
-      <li>
-        <minSeverity>6</minSeverity>
-		<label>Level 6</label>
-        <statFactors>
-          <PsychicEntropyMax>2.6667</PsychicEntropyMax>
-          <PsychicEntropyRecoveryRate>1.625</PsychicEntropyRecoveryRate>
-        </statFactors>
-      </li>
-    </stages>
-  </HediffDef>
-  
+	<AbilityDef ParentName="PsycastBase">
+		<defName>Enslave</defName>
+		<label>enslave</label>
+		<description>Enslave.</description>
+		<level>0</level>
+		<iconPath>UI/Abilities/Painblock</iconPath>
+		<hotKey>Misc1</hotKey>
+		<hostile>false</hostile>
+		<statBases>
+			<Ability_Duration>120</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<warmupTime>0.25</warmupTime>
+			<range>24.9</range>
+			<targetParams>
+				<onlyTargetIncapacitatedPawns>True</onlyTargetIncapacitatedPawns>
+				<onlyTargetColonistsOrPrisoners>True</onlyTargetColonistsOrPrisoners>
+				<canTargetPawns>True</canTargetPawns>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<hediffDef>Dominated</hediffDef>
+				<applicableToMechs>False</applicableToMechs>
+			</li>
+			<li Class="CompProperties_AbilityFleckOnTarget">
+				<fleckDef>PsycastPsychicEffect</fleckDef>
+			</li>
+			<li Class="Dominus.CompProperties_AbilityEnslave"></li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef ParentName="PsycastBase">
+		<defName>Suppress</defName>
+		<label>suppress</label>
+		<description>Suppress.</description>
+		<level>0</level>
+		<iconPath>UI/Abilities/Painblock</iconPath>
+		<hotKey>Misc1</hotKey>
+		<hostile>false</hostile>
+		<statBases>
+			<Ability_Duration>120</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<warmupTime>0.25</warmupTime>
+			<range>1</range>
+			<targetParams>
+				<canTargetSelf>True</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityFleckOnTarget">
+				<fleckDef>PsycastPsychicEffect</fleckDef>
+			</li>
+			<li Class="Dominus.CompProperties_AbilitySuppress">
+				<SuppressionAmount>0.3</SuppressionAmount>
+				<hediffDef>Dominated</hediffDef>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef ParentName="PsycastBase">
+		<defName>Improve</defName>
+		<label>improve</label>
+		<description>Improve.</description>
+		<level>0</level>
+		<iconPath>UI/Abilities/Painblock</iconPath>
+		<hotKey>Misc1</hotKey>
+		<hostile>false</hostile>
+		<statBases>
+			<Ability_Duration>120</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<warmupTime>0.25</warmupTime>
+			<range>1</range>
+			<targetParams>
+				<canTargetSelf>True</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityFleckOnTarget">
+				<fleckDef>PsycastPsychicEffect</fleckDef>
+			</li>
+			<li Class="Dominus.CompProperties_AbilityImprove"></li>
+		</comps>
+	</AbilityDef>
+
+	<HediffDef>
+		<defName>Dominus</defName>
+		<label>dominus</label>
+		<description>Dominus.</description>
+		<isBad>false</isBad>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>Dominated</defName>
+		<label>dominated</label>
+		<description>Dominated by a Dominus.</description>
+		<isBad>false</isBad>
+	</HediffDef>
+
+	<HediffDef MayRequireAnyOf="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Biotech">
+		<defName>DominatedLevel</defName>
+		<label>dominated level</label>
+		<description>An organic connection to a larger psychic field. This allows a person to
+			psychically induce a distant archotech superintelligence to influence reality in ways
+			that seem impossible.\n\nHigher levels of psylink permit the use of more powers.
+			Regardless of psylink level, a person can only use specific powers that they have
+			learned.\n\nPsylink comes from a variety of sources. Single-use psylink neuroformer
+			devices can create a psylink. Tribal peoples also know how to develop it through ritual
+			linking with the legendary anima tree.\n\nAs a physical phenomenon in the brain, psylink
+			is poorly-understood by scientists, not least because it seems to actively conceal
+			itself if studied too closely. One thing most agree on is that it somehow connects
+			people to archotechs and harnesses their power, possibly through some sort of
+			negotiation or sympathy mechanism.</description>
+		<descriptionShort>Allows a person to psychically-induce an archotech to influence reality in
+			ways that seem impossible. Higher levels of psylink permit the use of more powers.</descriptionShort>
+		<defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
+		<isBad>false</isBad>
+		<minSeverity>0</minSeverity>
+		<maxSeverity>6</maxSeverity>
+		<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<label>Level 1</label>
+				<statFactors>
+					<PsychicEntropyMax>1.0</PsychicEntropyMax>
+					<PsychicEntropyRecoveryRate>1</PsychicEntropyRecoveryRate>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>2</minSeverity>
+				<label>Level 2</label>
+				<statFactors>
+					<PsychicEntropyMax>1.3334</PsychicEntropyMax>
+					<PsychicEntropyRecoveryRate>1.125</PsychicEntropyRecoveryRate>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>3</minSeverity>
+				<label>Level 3</label>
+				<statFactors>
+					<PsychicEntropyMax>1.6667</PsychicEntropyMax>
+					<PsychicEntropyRecoveryRate>1.25</PsychicEntropyRecoveryRate>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>4</minSeverity>
+				<label>Level 4</label>
+				<statFactors>
+					<PsychicEntropyMax>2.0</PsychicEntropyMax>
+					<PsychicEntropyRecoveryRate>1.375</PsychicEntropyRecoveryRate>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>5</minSeverity>
+				<label>Level 5</label>
+				<statFactors>
+					<PsychicEntropyMax>2.3334</PsychicEntropyMax>
+					<PsychicEntropyRecoveryRate>1.5</PsychicEntropyRecoveryRate>
+				</statFactors>
+			</li>
+			<li>
+				<minSeverity>6</minSeverity>
+				<label>Level 6</label>
+				<statFactors>
+					<PsychicEntropyMax>2.6667</PsychicEntropyMax>
+					<PsychicEntropyRecoveryRate>1.625</PsychicEntropyRecoveryRate>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
 </Defs>

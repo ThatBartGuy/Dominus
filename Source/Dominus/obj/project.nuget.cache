@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "M5ztjby3OFo33eDHKZiX+Ia+hrbgR+ukL4mw2BHwIUDo7dU0RiOirYB9yJ71HT5cXRPP1CzWZZfuvkLQHLESsQ==",
+  "success": true,
+  "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\Dominus\\Source\\Dominus\\Dominus.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Artemy\\.nuget\\packages\\krafs.publicizer\\2.2.1\\krafs.publicizer.2.2.1.nupkg.sha512",
+    "C:\\Users\\Artemy\\.nuget\\packages\\krafs.rimworld.ref\\1.4.3704\\krafs.rimworld.ref.1.4.3704.nupkg.sha512"
+  ],
+  "logs": []
+}
