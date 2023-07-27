@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-	<AbilityDef ParentName="PsycastBase">
+	<AbilityDef>
 		<defName>Enslave</defName>
 		<label>enslave</label>
 		<description>Enslave.</description>
-		<level>1</level>
 		<iconPath>UI/Abilities/Painblock</iconPath>
 		<hotKey>Misc1</hotKey>
 		<hostile>true</hostile>
@@ -13,8 +12,9 @@
 			<Ability_Duration>120</Ability_Duration>
 		</statBases>
 		<verbProperties>
+			<verbClass>Verb_CastAbilityTouch</verbClass>
 			<warmupTime>5</warmupTime>
-			<range>10</range>
+			<range>-1</range>
 			<targetParams>
 				<canTargetPawns>True</canTargetPawns>
 			</targetParams>
@@ -30,11 +30,10 @@
 		</comps>
 	</AbilityDef>
 
-	<AbilityDef ParentName="PsycastBase">
+	<AbilityDef>
 		<defName>Suppress</defName>
 		<label>suppress</label>
 		<description>Suppress.</description>
-		<level>1</level>
 		<iconPath>UI/Abilities/Painblock</iconPath>
 		<hotKey>Misc1</hotKey>
 		<hostile>false</hostile>
@@ -42,8 +41,9 @@
 			<Ability_Duration>120</Ability_Duration>
 		</statBases>
 		<verbProperties>
+			<verbClass>Verb_CastAbilityTouch</verbClass>
 			<warmupTime>1</warmupTime>
-			<range>0</range>
+			<range>-1</range>
 			<targetParams>
 				<canTargetSelf>True</canTargetSelf>
 			</targetParams>
