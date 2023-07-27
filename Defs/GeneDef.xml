@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<GeneCategoryDef>
+    <defName>Dominus</defName>
+    <label>dominus</label>
+    <displayPriorityInXenotype>270</displayPriorityInXenotype>
+</GeneCategoryDef>
+
+<GeneDef>
+    <defName>Dominus</defName>
+    <label>dominus</label>
+    <labelShortAdj>dominus</labelShortAdj>
+    <description>Carriers of this gene can dominate others.</description>
+    <geneClass>Dominus.Gene_Dominus</geneClass>
+    <iconPath>UI/Icons/Genes/Gene_HemogenDrain</iconPath>
+    <!-- <prerequisite>Hemogenic</prerequisite> -->
+    <displayCategory>Dominus</displayCategory>
+    <displayOrderInCategory>-1</displayOrderInCategory>
+    <biostatCpx>3</biostatCpx>
+    <biostatMet>-5</biostatMet>
+  </GeneDef>
+
+</Defs>
