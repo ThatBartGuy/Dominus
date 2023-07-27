@@ -11,7 +11,7 @@ namespace Dominus
     public class Hediff_DominusLink : HediffWithComps
     {
         public Gene_Dominus owner;
-        public List<Hediff> upgrades;
+        public List<Hediff> upgrades = new List<Hediff>();
 
         public override void ExposeData()
         {
