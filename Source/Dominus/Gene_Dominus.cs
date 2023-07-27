@@ -12,15 +12,8 @@ namespace Dominus
 {
     public class Gene_Dominus : Gene
     {
-        public List<Hediff_DominusLink> slaves;
-        public List<HediffComp_DominusUpgrade> upgrades;
-
-        public override void PostAdd()
-        {
-            base.PostAdd();
-            slaves = new List<Hediff_DominusLink>();
-            upgrades = new List<HediffComp_DominusUpgrade>();
-        }
+        public List<Hediff_DominusLink> slaves = new List<Hediff_DominusLink>();
+        public List<HediffComp_DominusUpgrade> upgrades = new List<HediffComp_DominusUpgrade>();
 
         public override void ExposeData()
         {
