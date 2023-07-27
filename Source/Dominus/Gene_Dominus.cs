@@ -25,8 +25,8 @@ namespace Dominus
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Collections.Look(ref slaves, "slaves");
-            Scribe_Collections.Look(ref upgrades, "upgrades");
+            Scribe_Collections.Look(ref slaves, "slaves", LookMode.Reference);
+            Scribe_Collections.Look(ref upgrades, "upgrades", LookMode.Reference);
         }
 
         public override void PostRemove()
