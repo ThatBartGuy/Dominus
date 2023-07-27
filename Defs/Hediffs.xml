@@ -2,7 +2,7 @@
 <Defs>
 
 	<HediffDef>
-		<defName>Dominus</defName>
+		<defName>DM_Dominus</defName>
 		<label>dominus</label>
 		<description>Is dominus.</description>
 		<isBad>false</isBad>

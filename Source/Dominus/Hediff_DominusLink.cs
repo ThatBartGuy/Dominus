@@ -13,6 +13,13 @@ namespace Dominus
         public Gene_Dominus owner;
         public List<Hediff> upgrades;
 
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_References.Look(ref owner, "owner");
+            Scribe_Collections.Look(ref upgrades, "upgrades");
+        }
+
         public override void Notify_PawnDied()
         {
             base.Notify_PawnDied();

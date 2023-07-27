@@ -15,6 +15,31 @@ namespace Dominus
         public List<Hediff_DominusLink> slaves;
         public List<HediffComp_DominusUpgrade> upgrades;
 
+        public override void PostAdd()
+        {
+            base.PostAdd();
+            slaves = new List<Hediff_DominusLink>();
+            upgrades = new List<HediffComp_DominusUpgrade>();
+        }
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Collections.Look(ref slaves, "slaves");
+            Scribe_Collections.Look(ref upgrades, "upgrades");
+        }
+
+        public override void PostRemove()
+        {
+            base.PostRemove();
+
+            for (int i = slaves.Count - 1; i >= 0; i--)
+            {
+                slaves[i].pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Berserk, "{0} is no longer can control {1}.".Formatted(pawn.LabelCap, slaves[i].pawn.LabelCap), forceWake: true);
+                RemoveSlave(slaves[i]);
+            }
+        }
+
         public void AddSlave(Hediff_DominusLink slave)
         {
             slaves.Add(slave);
