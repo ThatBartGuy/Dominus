@@ -62,7 +62,7 @@ namespace Dominus
 
             if (stat / 0.25f <= Gene.slaves.Count)
             {
-                reason = "{0} already has {1}/{2} slaves".Formatted(parent.pawn.LabelCap, (stat / 0.25f) + "", Gene.slaves.Count + "");
+                reason = "{0} already has {1}/{2} slaves".Formatted(parent.pawn.LabelCap, stat / 0.25f, Gene.slaves.Count);
                 return true;
             }
 
@@ -89,7 +89,7 @@ namespace Dominus
 
         public CompProperties_AbilityEnslave()
         {
-            compClass = typeof(CompProperties_AbilityEnslave);
+            compClass = typeof(CompAbilityEffect_Enslave);
         }
     }
 }
