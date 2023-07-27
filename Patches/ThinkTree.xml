@@ -14,7 +14,6 @@
 						<subNodes>
 
 							<li Class="Dominus.ThinkNode_DominusRebellionCheck">
-								<Gene_Dominus>Dominated</Gene_Dominus>
 								<subNodes>
 
 									<li Class="ThinkNodeConditional_HashIntervalTick">
