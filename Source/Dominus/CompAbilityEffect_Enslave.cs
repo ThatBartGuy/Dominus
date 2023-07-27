@@ -72,7 +72,7 @@ namespace Dominus
         public override void Apply(LocalTargetInfo target, LocalTargetInfo dest)
         {
             base.Apply(target, dest);
-            Hediff_DominusLink hediff = HediffMaker.MakeHediff(Props.hediffDef, target.Pawn) as Hediff_DominusLink;
+            Hediff_DominusLink hediff = HediffMaker.MakeHediff(Props.hediffDef, target.Pawn, target.Pawn.health.hediffSet.GetBrain()) as Hediff_DominusLink;
             target.Pawn.health.AddHediff(hediff);
             hediff.owner = Gene;
             Gene.AddSlave(hediff);

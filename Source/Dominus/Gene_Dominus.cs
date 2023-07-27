@@ -46,7 +46,7 @@ namespace Dominus
 
             for (int i = upgrades.Count - 1; i >= 0; i--)
             {
-                Hediff hediff = HediffMaker.MakeHediff(upgrades[i].UpgradeHediff, slave.pawn);
+                Hediff hediff = HediffMaker.MakeHediff(upgrades[i].UpgradeHediff, slave.pawn, slave.pawn.health.hediffSet.GetBrain());
                 slaves[i].upgrades.Add(hediff);
                 slave.pawn.health.AddHediff(hediff);
             }
@@ -74,7 +74,7 @@ namespace Dominus
             for (int i = slaves.Count - 1; i >= 0; i--)
             {
                 Pawn slave = slaves[i].pawn;
-                Hediff hediff = HediffMaker.MakeHediff(upgrade.UpgradeHediff, slave);
+                Hediff hediff = HediffMaker.MakeHediff(upgrade.UpgradeHediff, slave, slave.health.hediffSet.GetBrain());
                 slaves[i].upgrades.Add(hediff);
                 slave.health.AddHediff(hediff);
             }
