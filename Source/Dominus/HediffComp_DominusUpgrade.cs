@@ -46,6 +46,16 @@ namespace Dominus
             base.CompPostPostRemoved();
             Gene.RemoveUpgrade(this);
         }
+
+        public override void CompPostTick(ref float severityAdjustment)
+        {
+            base.CompPostTick(ref severityAdjustment);
+
+            if (severityAdjustment != 0)
+            {
+                Gene.RefreshSeverity(this);
+            }
+        }
     }
 
     public class HediffCompProperties_DominusUpgrade : HediffCompProperties

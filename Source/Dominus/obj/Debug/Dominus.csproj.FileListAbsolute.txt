@@ -4,3 +4,5 @@ C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Dominus\Source\Domin
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Dominus\Source\Dominus\bin\Debug\Dominus.pdb
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Dominus\Source\Dominus\obj\Debug\Dominus.dll
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Dominus\Source\Dominus\obj\Debug\Dominus.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Dominus\Assemblies\Dominus.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Dominus\Assemblies\Dominus.pdb

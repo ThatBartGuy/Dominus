@@ -69,5 +69,19 @@ namespace Dominus
                 RemoveSlave(slaves[i]);
             }
         }
+
+        public void RefreshSeverity(HediffComp_DominusUpgrade upgrade)
+        {
+            for (int i = slaves.Count - 1; i >= 0; i--)
+            {
+                Pawn slave = slaves[i].pawn;
+                Hediff hediff = slave.health.hediffSet.GetFirstHediffOfDef(upgrade.UpgradeHediff);
+
+                if (hediff != null)
+                {
+                    hediff.Severity = upgrade.parent.Severity;
+                }
+            }
+        }
     }
 }
