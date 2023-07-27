@@ -35,7 +35,7 @@
 				<compClass>CompUsableImplant</compClass>
 				<useJob>UseItem</useJob>
 				<useLabel>Implant sublink</useLabel>
-				<userMustHaveHediff>Dominus</userMustHaveHediff>
+				<userMustHaveHediff>DM_Dominus</userMustHaveHediff>
 			</li>
 			<li Class="CompProperties_UseEffectInstallImplant">
 				<hediffDef>DominusWorkSpeedMaster</hediffDef>

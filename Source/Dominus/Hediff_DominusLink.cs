@@ -17,7 +17,7 @@ namespace Dominus
         {
             base.ExposeData();
             Scribe_References.Look(ref owner, "owner");
-            Scribe_Collections.Look(ref upgrades, "upgrades");
+            Scribe_Collections.Look(ref upgrades, "upgrades", LookMode.Reference);
         }
 
         public override void Notify_PawnDied()
