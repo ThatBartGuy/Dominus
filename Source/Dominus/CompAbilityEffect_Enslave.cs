@@ -35,7 +35,7 @@ namespace Dominus
                 return false;
             }
 
-            if (target == null || target.Pawn == null || target.Pawn.health.hediffSet.HasHediff(Props.hediffDef))
+            if (!target.IsValid || target.Pawn == null || target.Pawn.health.hediffSet.HasHediff(Props.hediffDef))
             {
                 return false;
             }

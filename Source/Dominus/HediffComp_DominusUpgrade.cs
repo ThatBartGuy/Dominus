@@ -13,6 +13,7 @@ namespace Dominus
         private HediffCompProperties_DominusUpgrade Props => props as HediffCompProperties_DominusUpgrade;
 
         private Gene_Dominus cachedGene;
+        private float cachedSeverity;
 
         public Gene_Dominus Gene
         {
@@ -51,8 +52,9 @@ namespace Dominus
         {
             base.CompPostTick(ref severityAdjustment);
 
-            if (severityAdjustment != 0)
+            if (cachedSeverity != parent.Severity)
             {
+                cachedSeverity = parent.Severity;
                 Gene.RefreshSeverity(this);
             }
         }

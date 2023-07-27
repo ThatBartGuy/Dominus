@@ -29,8 +29,17 @@ namespace Dominus
 
         public void RemoveSlave(Hediff_DominusLink slave)
         {
-            slaves.Remove(slave);
             slave.pawn.health.RemoveHediff(slave);
+        }
+
+        public void HandleSlaveRemove(Hediff_DominusLink slave)
+        {
+            slaves.Remove(slave);
+
+            for (int i = slave.upgrades.Count - 1; i >= 0; i--)
+            {
+                slave.pawn.health.RemoveHediff(slave.upgrades[i]);
+            }
         }
 
         public void AddUpgrade(HediffComp_DominusUpgrade upgrade)

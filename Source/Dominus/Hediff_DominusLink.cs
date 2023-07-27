@@ -37,10 +37,7 @@ namespace Dominus
         public override void PostRemoved()
         {
             base.PostRemoved();
-            for (int i = upgrades.Count - 1; i >= 0; i--)
-            {
-                pawn.health.RemoveHediff(upgrades[i]);
-            }
+            owner.HandleSlaveRemove(this);
         }
     }
 }

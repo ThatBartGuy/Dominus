@@ -1,135 +1,135 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-<HediffDef>
-    <defName>Dominus</defName>
-    <label>dominus</label>
-    <description>Is dominus.</description>
-    <isBad>false</isBad>
-  </HediffDef>
+	<HediffDef>
+		<defName>Dominus</defName>
+		<label>dominus</label>
+		<description>Is dominus.</description>
+		<isBad>false</isBad>
+	</HediffDef>
 
-<HediffDef>
-    <defName>Dominated</defName>
-    <label>dominated</label>
-    <description>Dominated by a Dominus.</description>
-    <isBad>false</isBad>
-    <hediffClass>Dominus.Hediff_DominusLink</hediffClass>
-  </HediffDef>
-  
+	<HediffDef>
+		<defName>Dominated</defName>
+		<label>dominated</label>
+		<description>Dominated by a Dominus.</description>
+		<isBad>false</isBad>
+		<hediffClass>Dominus.Hediff_DominusLink</hediffClass>
+	</HediffDef>
+
 
 	<!--Upgrade Hediffs-->
 
-  <ThingDef ParentName="ControlSublinkBase">
-    <defName>DominumNeuroformerWorkSpeed</defName>
-    <label>Dominum Neuroformer (Work Speed)</label>
-    <description>Faster work speed for slaves.</description>
-    <costList>
-      <SignalChip>1</SignalChip>
-      <ComponentIndustrial>4</ComponentIndustrial>
-    </costList>
-    <recipeMaker>
-      <researchPrerequisite>StandardMechtech</researchPrerequisite>
-    </recipeMaker>
-    <comps>
-      <li Class="CompProperties_Usable">
-        <compClass>CompUsableImplant</compClass>
-        <useJob>UseItem</useJob>
-        <useLabel>Implant sublink</useLabel>
-        <userMustHaveHediff>Dominus</userMustHaveHediff>
-      </li>
-      <li Class="CompProperties_UseEffectInstallImplant">
-        <hediffDef>DominusWorkSpeedMaster</hediffDef>
-        <bodyPart>Brain</bodyPart>
-        <canUpgrade>true</canUpgrade>
-        <maxSeverity>4</maxSeverity>
-      </li>
-    </comps>
-  </ThingDef>
+	<ThingDef ParentName="ControlSublinkBase">
+		<defName>DominumNeuroformerWorkSpeed</defName>
+		<label>Dominum Neuroformer (Work Speed)</label>
+		<description>Faster work speed for slaves.</description>
+		<costList>
+			<SignalChip>1</SignalChip>
+			<ComponentIndustrial>4</ComponentIndustrial>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisite>StandardMechtech</researchPrerequisite>
+		</recipeMaker>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<compClass>CompUsableImplant</compClass>
+				<useJob>UseItem</useJob>
+				<useLabel>Implant sublink</useLabel>
+				<userMustHaveHediff>Dominus</userMustHaveHediff>
+			</li>
+			<li Class="CompProperties_UseEffectInstallImplant">
+				<hediffDef>DominusWorkSpeedMaster</hediffDef>
+				<bodyPart>Brain</bodyPart>
+				<canUpgrade>true</canUpgrade>
+				<maxSeverity>4</maxSeverity>
+			</li>
+		</comps>
+	</ThingDef>
 
-<HediffDef>
-    <defName>DominusWorkSpeedMaster</defName>
-    <hediffClass>Hediff_Level</hediffClass>
-    <label>Dominus (WorkSpeed) (Master)</label>
-    <description>Work speed for slaves.</description>
-    <defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
-    <isBad>false</isBad>
-    <priceImpact>true</priceImpact>
-    <initialSeverity>1</initialSeverity> <!-- Severity is bound to level of implant -->
-    <minSeverity>0</minSeverity>
-    <maxSeverity>4</maxSeverity>
-    <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
-    <levelIsQuantity>true</levelIsQuantity>
-    <comps>
-      <li Class="Dominus.HediffCompProperties_DominusUpgrade">
-        <upgradeHediff>DominusWorkSpeedSlave</upgradeHediff>
-      </li>
-    </comps>
-    <stages>
-      <li>
-        <minSeverity>1</minSeverity>
-        <statOffsets>
-          <GeneralLaborSpeed>-10</GeneralLaborSpeed>
-        </statOffsets>
-      </li>
-      <li>
-        <minSeverity>2</minSeverity>
-        <statOffsets>
-          <GeneralLaborSpeed>-20</GeneralLaborSpeed>
-        </statOffsets>
-      </li>
-      <li>
-        <minSeverity>3</minSeverity>
-        <statOffsets>
-          <GeneralLaborSpeed>-30</GeneralLaborSpeed>
-        </statOffsets>
-      </li>
-      <li>
-        <minSeverity>4</minSeverity>
-        <statOffsets>
-          <GeneralLaborSpeed>-40</GeneralLaborSpeed>
-        </statOffsets>
-      </li>
-    </stages>
-  </HediffDef>
+	<HediffDef>
+		<defName>DominusWorkSpeedMaster</defName>
+		<hediffClass>Hediff_Level</hediffClass>
+		<label>Dominus (WorkSpeed) (Master)</label>
+		<description>Work speed for slaves.</description>
+		<defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
+		<isBad>false</isBad>
+		<priceImpact>true</priceImpact>
+		<initialSeverity>1</initialSeverity> <!-- Severity is bound to level of implant -->
+		<minSeverity>0</minSeverity>
+		<maxSeverity>4</maxSeverity>
+		<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+		<levelIsQuantity>true</levelIsQuantity>
+		<comps>
+			<li Class="Dominus.HediffCompProperties_DominusUpgrade">
+				<upgradeHediff>DominusWorkSpeedSlave</upgradeHediff>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<statOffsets>
+					<GeneralLaborSpeed>-10</GeneralLaborSpeed>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>2</minSeverity>
+				<statOffsets>
+					<GeneralLaborSpeed>-20</GeneralLaborSpeed>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>3</minSeverity>
+				<statOffsets>
+					<GeneralLaborSpeed>-30</GeneralLaborSpeed>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>4</minSeverity>
+				<statOffsets>
+					<GeneralLaborSpeed>-40</GeneralLaborSpeed>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
 
-  <HediffDef>
-    <defName>DominusWorkSpeedSlave</defName>
-    <hediffClass>Hediff_Level</hediffClass>
-    <label>Dominus (WorkSpeed) (Slave)</label>
-    <description>Work speed for slaves.</description>
-    <defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
-    <isBad>false</isBad>
-    <priceImpact>true</priceImpact>
-    <minSeverity>0</minSeverity>
-    <maxSeverity>4</maxSeverity>
-    <keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
-    <levelIsQuantity>true</levelIsQuantity>
-    <stages>
-      <li>
-        <minSeverity>1</minSeverity>
-        <statOffsets>
-          <GeneralLaborSpeed>7.5</GeneralLaborSpeed>
-        </statOffsets>
-      </li>
-      <li>
-        <minSeverity>2</minSeverity>
-        <statOffsets>
-          <GeneralLaborSpeed>15</GeneralLaborSpeed>
-        </statOffsets>
-      </li>
-      <li>
-        <minSeverity>3</minSeverity>
-        <statOffsets>
-          <GeneralLaborSpeed>22.5</GeneralLaborSpeed>
-        </statOffsets>
-      </li>
-      <li>
-        <minSeverity>4</minSeverity>
-        <statOffsets>
-          <GeneralLaborSpeed>30</GeneralLaborSpeed>
-        </statOffsets>
-      </li>
-    </stages>
-  </HediffDef>
+	<HediffDef>
+		<defName>DominusWorkSpeedSlave</defName>
+		<hediffClass>Hediff_Level</hediffClass>
+		<label>Dominus (WorkSpeed) (Slave)</label>
+		<description>Work speed for slaves.</description>
+		<defaultLabelColor>(0.6, 0.6, 1.0)</defaultLabelColor>
+		<isBad>false</isBad>
+		<priceImpact>true</priceImpact>
+		<minSeverity>0</minSeverity>
+		<maxSeverity>4</maxSeverity>
+		<keepOnBodyPartRestoration>True</keepOnBodyPartRestoration>
+		<levelIsQuantity>true</levelIsQuantity>
+		<stages>
+			<li>
+				<minSeverity>1</minSeverity>
+				<statOffsets>
+					<GeneralLaborSpeed>7.5</GeneralLaborSpeed>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>2</minSeverity>
+				<statOffsets>
+					<GeneralLaborSpeed>15</GeneralLaborSpeed>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>3</minSeverity>
+				<statOffsets>
+					<GeneralLaborSpeed>22.5</GeneralLaborSpeed>
+				</statOffsets>
+			</li>
+			<li>
+				<minSeverity>4</minSeverity>
+				<statOffsets>
+					<GeneralLaborSpeed>30</GeneralLaborSpeed>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
 
 </Defs>
