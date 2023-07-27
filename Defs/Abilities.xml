@@ -12,9 +12,9 @@
 			<Ability_Duration>120</Ability_Duration>
 		</statBases>
 		<verbProperties>
-			<verbClass>Verb_CastAbility</verbClass>
+			<verbClass>Verb_CastAbilityTouch</verbClass>
 			<warmupTime>5</warmupTime>
-			<range>5</range>
+			<range>-1</range>
 			<targetParams>
 				<canTargetPawns>True</canTargetPawns>
 			</targetParams>
@@ -41,7 +41,7 @@
 			<Ability_Duration>120</Ability_Duration>
 		</statBases>
 		<verbProperties>
-			<verbClass>Verb_CastAbility</verbClass>
+			<verbClass>Verb_CastAbilityTouch</verbClass>
 			<warmupTime>1</warmupTime>
 			<range>-1</range>
 			<targetParams>
