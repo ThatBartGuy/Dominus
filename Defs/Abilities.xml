@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <AbilityDef ParentName="PsycastBase">
+    <defName>Enslave</defName>
+    <label>enslave</label>
+    <description>Enslave.</description>
+    <level>1</level>
+    <iconPath>UI/Abilities/Painblock</iconPath>
+    <hotKey>Misc1</hotKey>
+    <hostile>true</hostile>
+    <statBases>
+      <Ability_Duration>120</Ability_Duration>
+    </statBases>
+    <verbProperties>
+      <warmupTime>5</warmupTime>
+      <range>10</range>
+      <targetParams>
+		<canTargetPawns>True</canTargetPawns>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityFleckOnTarget">
+        <fleckDef>PsycastPsychicEffect</fleckDef>
+      </li>
+	  <li Class="Dominus.CompProperties_AbilityEnslave">
+		  <hediffDef>Dominated</hediffDef>
+		  <onlyDownedNonColonists>true</onlyDownedNonColonists>
+	  </li>
+    </comps>
+  </AbilityDef>
+  
+  <AbilityDef ParentName="PsycastBase">
+    <defName>Suppress</defName>
+    <label>suppress</label>
+    <description>Suppress.</description>
+    <level>1</level>
+    <iconPath>UI/Abilities/Painblock</iconPath>
+    <hotKey>Misc1</hotKey>
+    <hostile>false</hostile>
+    <statBases>
+      <Ability_Duration>120</Ability_Duration>
+    </statBases>
+    <verbProperties>
+      <warmupTime>1</warmupTime>
+      <range>0</range>
+      <targetParams>
+		<canTargetSelf>True</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityFleckOnTarget">
+        <fleckDef>PsycastPsychicEffect</fleckDef>
+      </li>
+	    <li Class="Dominus.CompProperties_AbilitySuppress">
+		    <amount>25</amount>
+	    </li>
+    </comps>
+  </AbilityDef>
+  
+ </Defs>
