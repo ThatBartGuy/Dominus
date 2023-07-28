@@ -75,6 +75,7 @@ namespace Dominus
             {
                 Pawn slave = slaves[i].pawn;
                 Hediff hediff = HediffMaker.MakeHediff(upgrade.UpgradeHediff, slave, slave.health.hediffSet.GetBrain());
+                hediff.Severity = upgrade.parent.Severity;
                 slaves[i].upgrades.Add(hediff);
                 slave.health.AddHediff(hediff);
             }
