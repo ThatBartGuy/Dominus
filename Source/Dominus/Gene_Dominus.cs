@@ -97,6 +97,7 @@ namespace Dominus
             for (int i = slaves.Count - 1; i >= 0; i--)
             {
                 Pawn slave = slaves[i].pawn;
+                Log.Message(slaves[i].upgrades.Count + "");
                 Hediff hediff = slaves[i].upgrades.First((Hediff x) => x.def == upgrade.UpgradeHediff);
                 slaves[i].upgrades.Remove(hediff);
                 slave.health.RemoveHediff(hediff);
