@@ -1,5 +1,6 @@
 ﻿using Mono.Unix.Native;
 using RimWorld;
+using Steamworks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -120,7 +121,7 @@ namespace Dominus
 
                     if (leveled != null)
                     {
-                        leveled.ChangeLevel((int)upgrade.parent.Severity);
+                        leveled.SetLevelTo((int)upgrade.parent.Severity);
                     }
                 }
             }
