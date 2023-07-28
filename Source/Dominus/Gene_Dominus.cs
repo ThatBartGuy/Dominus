@@ -115,6 +115,13 @@ namespace Dominus
                 if (hediff != null)
                 {
                     hediff.Severity = upgrade.parent.Severity;
+                    
+                    Hediff_Level leveled = hediff as Hediff_Level;
+
+                    if (leveled != null)
+                    {
+                        leveled.ChangeLevel((int)upgrade.parent.Severity);
+                    }
                 }
             }
         }

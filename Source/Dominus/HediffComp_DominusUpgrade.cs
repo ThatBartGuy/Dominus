@@ -54,6 +54,7 @@ namespace Dominus
 
             if (cachedSeverity != parent.Severity)
             {
+                Log.Message("1");
                 cachedSeverity = parent.Severity;
                 Gene.RefreshSeverity(this);
             }
