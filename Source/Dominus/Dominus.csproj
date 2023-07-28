@@ -45,6 +45,7 @@
     <Compile Include="CompAbilityEffect_Suppress.cs" />
     <Compile Include="DominusDefOf.cs" />
     <Compile Include="Gene_Dominus.cs" />
+    <Compile Include="Gene_DominusUpgrade.cs" />
     <Compile Include="HediffComp_DominusUpgrade.cs" />
     <Compile Include="Hediff_DominusLink.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

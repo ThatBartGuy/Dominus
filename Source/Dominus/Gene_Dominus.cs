@@ -16,12 +16,6 @@ namespace Dominus
         public List<Hediff_DominusLink> slaves = new List<Hediff_DominusLink>();
         public List<HediffComp_DominusUpgrade> upgrades = new List<HediffComp_DominusUpgrade>();
 
-        public override void PostAdd()
-        {
-            base.PostAdd();
-            pawn.health.AddHediff(DominusDefOf.DM_Dominus);
-        }
-
         public override void ExposeData()
         {
             base.ExposeData();
@@ -32,7 +26,6 @@ namespace Dominus
         public override void PostRemove()
         {
             base.PostRemove();
-            pawn.health.RemoveHediff(pawn.health.hediffSet.GetFirstHediffOfDef(DominusDefOf.DM_Dominus));
 
             for (int i = slaves.Count - 1; i >= 0; i--)
             {
