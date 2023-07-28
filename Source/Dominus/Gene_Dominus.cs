@@ -48,8 +48,16 @@ namespace Dominus
             for (int i = upgrades.Count - 1; i >= 0; i--)
             {
                 Hediff hediff = HediffMaker.MakeHediff(upgrades[i].UpgradeHediff, slave.pawn, slave.pawn.health.hediffSet.GetBrain());
+                hediff.Severity = upgrades[i].parent.Severity;
                 slaves[i].upgrades.Add(hediff);
                 slave.pawn.health.AddHediff(hediff);
+
+                Hediff_Level leveled = hediff as Hediff_Level;
+
+                if (leveled != null)
+                {
+                    leveled.SetLevelTo((int)upgrades[i].parent.Severity);
+                }
             }
         }
 
