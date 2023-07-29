@@ -14,5 +14,5 @@ public static class DominusDefOf
         DefOfHelper.EnsureInitializedInCtor(typeof(DominusDefOf));
     }
 
-    public static HediffDef DM_Dominus;
+    public static HediffDef DM_Dominus; 
 }
