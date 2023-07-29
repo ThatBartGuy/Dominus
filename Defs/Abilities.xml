@@ -2,7 +2,7 @@
 <Defs>
 
 	<AbilityDef>
-		<defName>Enslave</defName>
+		<defName>DM_Enslave</defName>
 		<label>enslave</label>
 		<description>Enslave.</description>
 		<iconPath>UI/Abilities/Painblock</iconPath>
@@ -14,7 +14,7 @@
 		<verbProperties>
 			<verbClass>Verb_CastAbilityTouch</verbClass>
 			<warmupTime>5</warmupTime>
-			<range>-1</range>
+			<range>5</range>
 			<targetParams>
 				<canTargetPawns>True</canTargetPawns>
 			</targetParams>
@@ -24,14 +24,14 @@
 				<fleckDef>PsycastPsychicEffect</fleckDef>
 			</li>
 			<li Class="Dominus.CompProperties_AbilityEnslave">
-				<hediffDef>Dominated</hediffDef>
+				<hediffDef>DM_Dominated</hediffDef>
 				<onlyDownedNonColonists>true</onlyDownedNonColonists>
 			</li>
 		</comps>
 	</AbilityDef>
 
 	<AbilityDef>
-		<defName>Suppress</defName>
+		<defName>DM_Suppress</defName>
 		<label>suppress</label>
 		<description>Suppress.</description>
 		<iconPath>UI/Abilities/Painblock</iconPath>
@@ -53,7 +53,7 @@
 				<fleckDef>PsycastPsychicEffect</fleckDef>
 			</li>
 			<li Class="Dominus.CompProperties_AbilitySuppress">
-				<amount>25</amount>
+				<amount>0.25</amount>
 			</li>
 		</comps>
 	</AbilityDef>

@@ -2,23 +2,56 @@
 <Defs>
 
 	<GeneCategoryDef>
-		<defName>Dominus</defName>
+		<defName>DM_Dominus</defName>
 		<label>dominus</label>
-		<displayPriorityInXenotype>270</displayPriorityInXenotype>
+		<displayPriorityInXenotype>280</displayPriorityInXenotype>
 	</GeneCategoryDef>
 
 	<GeneDef>
-		<defName>Dominus</defName>
+		<defName>DM_Dominus</defName>
 		<label>dominus</label>
 		<labelShortAdj>dominus</labelShortAdj>
 		<description>Carriers of this gene can dominate others.</description>
 		<geneClass>Dominus.Gene_Dominus</geneClass>
 		<iconPath>UI/Icons/Genes/Gene_HemogenDrain</iconPath>
-		<!-- <prerequisite>Hemogenic</prerequisite> -->
-		<displayCategory>Dominus</displayCategory>
+		<displayCategory>DS_Dominus</displayCategory>
 		<displayOrderInCategory>-1</displayOrderInCategory>
 		<biostatCpx>3</biostatCpx>
-		<biostatMet>-5</biostatMet>
+		<biostatMet>-3</biostatMet>
+		<abilities>
+			<li>DM_Enslave</li>
+		</abilities>
+	</GeneDef>
+
+	<GeneDef>
+		<defName>DM_Suppress</defName>
+		<label>suppress</label>
+		<labelShortAdj>suppress</labelShortAdj>
+		<description>Carriers of this gene can suppress dominated slaves.</description>
+		<geneClass>Dominus.Gene_Dominus</geneClass>
+		<iconPath>UI/Icons/Genes/Gene_Supress</iconPath>
+		<prerequisite>DM_Dominus</prerequisite>
+		<displayCategory>DM_Dominus</displayCategory>
+		<displayOrderInCategory>-1</displayOrderInCategory>
+		<biostatCpx>2</biostatCpx>
+		<biostatMet>-2</biostatMet>
+		<abilities>
+			<li>DM_Suppress</li>
+		</abilities>
+	</GeneDef>
+
+	<GeneDef>
+		<defName>DM_Improve</defName>
+		<label>improve</label>
+		<labelShortAdj>improve</labelShortAdj>
+		<description>Carriers of this gene can improve dominated slaves.</description>
+		<geneClass>Dominus.Gene_Dominus</geneClass>
+		<iconPath>UI/Icons/Genes/Gene_HemogenDrain</iconPath>
+		<prerequisite>DM_Dominus</prerequisite>
+		<displayCategory>DM_Dominus</displayCategory>
+		<displayOrderInCategory>-1</displayOrderInCategory>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>-1</biostatMet>
 	</GeneDef>
 
 </Defs>
