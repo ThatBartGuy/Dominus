@@ -3,9 +3,9 @@
 
 	<AbilityDef>
 		<defName>DM_Enslave</defName>
-		<label>enslave</label>
-		<description>Enslave.</description>
-		<iconPath>UI/Abilities/Painblock</iconPath>
+		<label>Dominate.</label>
+		<description>Dominate.</description>
+		<iconPath>UI/Icons/Abilities/Ability_Dominate</iconPath>
 		<hotKey>Misc1</hotKey>
 		<hostile>true</hostile>
 		<statBases>
@@ -34,7 +34,7 @@
 		<defName>DM_Suppress</defName>
 		<label>suppress</label>
 		<description>Suppress.</description>
-		<iconPath>UI/Abilities/Painblock</iconPath>
+		<iconPath>UI/Icons/Genes/Gene_Supress</iconPath>
 		<hotKey>Misc1</hotKey>
 		<hostile>false</hostile>
 		<statBases>

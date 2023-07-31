@@ -10,7 +10,7 @@
 				<subNodes>
 
 					<li Class="ThinkNode_ConditionalHasAbility">
-						<ability>Suppress</ability>
+						<ability>DM_Suppress</ability>
 						<subNodes>
 
 							<li Class="Dominus.ThinkNode_DominusRebellionCheck">
@@ -21,7 +21,7 @@
 										<subNodes>
 
 											<li Class="JobGiver_AICastAbilityOnSelf">
-												<ability>Suppress</ability>
+												<ability>DM_Suppress</ability>
 											</li>
 
 										</subNodes>
